@@ -6,7 +6,6 @@
  */
 
 #include <dt-bindings/input/input.h>
-#include <dt-bindings/leds/common.h>
 #include <dt-bindings/gpio/meson-g12a-gpio.h>
 #include <dt-bindings/sound/meson-g12a-tohdmitx.h>
 
@@ -44,15 +43,13 @@
 		compatible = "gpio-leds";
 
 		led-white {
-			color = <LED_COLOR_ID_WHITE>;
-			function = LED_FUNCTION_STATUS;
+			label = "vim3:white:sys";
 			gpios = <&gpio_ao GPIOAO_4 GPIO_ACTIVE_HIGH>;
 			linux,default-trigger = "heartbeat";
 		};
 
 		led-red {
-			color = <LED_COLOR_ID_RED>;
-			function = LED_FUNCTION_STATUS;
+			label = "vim3:red";
 			gpios = <&gpio_expander 5 GPIO_ACTIVE_HIGH>;
 		};
 	};
